@@ -97,7 +97,7 @@
                         Our <span>Lab Members</span> &amp; Research Team
                     </h1>
                     <p class="lab-hero-subtitle">
-                        We are an interdisciplinary team at Simon Fraser University researching physically and biomechanically based facial animation, soft-tissue continuum solvers, high-resolution biological ground-truth validation (MRI &amp; sEMG), speech coarticulation, and interactive character graphics, affiliated with the <a href="https://gruvi.cs.sfu.ca/" target="_blank" rel="noopener noreferrer">GrUVi (Graphics, Usability, and Visualization) Laboratory</a>.
+                        We are an interdisciplinary team at Simon Fraser University researching physically and biomechanically based facial animation, soft-tissue continuum solvers, high-resolution biological ground-truth validation (MRI &amp; sEMG), speech coarticulation, and interactive character graphics, affiliated with the <a href="https://gruvi.cs.sfu.ca/" target="_blank" rel="noopener noreferrer">GrUVi (Graphics, Union, Vision) Laboratory</a>.
                     </p>
                     <div class="lab-hero-advisor">
                         <span><strong>Faculty Advisor:</strong> <a href="https://www.dgp.toronto.edu/~elf/" target="_blank" rel="noopener noreferrer">Dr. Eugene Fiume</a> (SFU / GrUVi)</span>
@@ -126,24 +126,25 @@
                     </div>
                 </header>
 
-                <!-- Interactive Search & Filter Controls -->
+                <!-- Clean Non-Sticky Search & Filter Controls -->
                 <div class="controls-panel">
                     <div class="controls-row">
                         <!-- Live Search Input -->
                         <div class="search-box-wrapper">
                             <i class="fas fa-search search-icon"></i>
-                            <input type="text" id="memberSearch" class="search-input" placeholder="Search by member name, project, or keyword..." />
+                            <input type="text" id="memberSearch" class="search-input" placeholder="Search members or projects..." />
                         </div>
 
                         <!-- Project Category Filter Buttons -->
                         <div class="filter-pills-group" id="projectPills">
-                            <button class="filter-btn active" data-filter="all">All Members (<span id="totalMemberCount">18</span>)</button>
+                            <button class="filter-btn active" data-filter="all">All Members (<span id="totalMemberCount">17</span>)</button>
                             <button class="filter-btn" data-filter="proj-b1">Proj B1 (Ground Truth)</button>
                             <button class="filter-btn" data-filter="proj-b2">Proj B2 (Fine Dynamics)</button>
                             <button class="filter-btn" data-filter="proj-b3">Proj B3 (Asset Gen)</button>
                             <button class="filter-btn" data-filter="proj-b4-b5">Proj B4 &amp; B5 (Solver/Web)</button>
                             <button class="filter-btn" data-filter="proj-a1">Proj A1 (Skin Registration)</button>
                             <button class="filter-btn" data-filter="placeholder">Open Slots (3)</button>
+                            <button class="filter-btn" data-filter="alumni"><i class="fas fa-graduation-cap"></i> Alumni (1)</button>
                         </div>
 
                         <!-- Project Filter Dropdown -->
@@ -162,734 +163,657 @@
                 </div>
 
                 <!-- ================================================================= -->
-                <!-- MEMBERS SECTION -->
+                <!-- MEMBERS LIST WITH PHOTOS                                          -->
                 <!-- ================================================================= -->
                 
-                <!-- 1. Research Leadership & Mentorship -->
+                <!-- 1. Research Leadership & Mentorship (Modest Icon) -->
                 <div class="section-header">
-                    <h2><i class="fas fa-crown" style="color: var(--accent-amber);"></i> Research Leadership &amp; Mentorship</h2>
+                    <h2><i class="fas fa-user-circle" style="color: var(--accent-blue);"></i> Research Lead &amp; Mentor</h2>
                 </div>
 
-                <div class="members-grid" id="leadershipGrid">
-                    <!-- Richard Peng Card -->
-                    <div class="member-card" data-project="proj-b5 proj-b4 proj-b1 proj-b2 proj-b3 proj-a1" data-name="zhiyun richard peng">
-                        <div class="card-profile-header">
-                            <div class="member-avatar-box">
+                <div class="members-list-container" id="leadershipList">
+                    <!-- Richard Peng -->
+                    <div class="member-list-item" data-project="proj-b5 proj-b4 proj-b1 proj-b2 proj-b3 proj-a1" data-name="zhiyun richard peng">
+                        <div class="member-list-left">
+                            <div class="member-list-avatar">
                                 <img src="suit_sfu.jpg" alt="Zhiyun (Richard) Peng" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
                                 <div class="avatar-fallback" style="display:none;">RP</div>
                             </div>
-                            <div class="member-details">
-                                <h3 class="member-name">Zhiyun (Richard) Peng 彭志云</h3>
-                                <div class="member-affiliation">School of Computing Science, Simon Fraser University &bull; <a href="https://gruvi.cs.sfu.ca/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-blue); text-decoration: none;">GrUVi Lab</a></div>
+                            <div class="member-list-info">
+                                <h3 class="member-list-name">Zhiyun (Richard) Peng 彭志云</h3>
+                                <div class="member-list-affil">School of Computing Science, SFU &bull; <a href="https://gruvi.cs.sfu.ca/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-blue); text-decoration: none;">GrUVi Lab</a></div>
+                                <div class="member-list-project-tag" onclick="filterByProject('proj-b5')">
+                                    <i class="fas fa-layer-group"></i> Project B5: In-House Physical Simulator &amp; Facial Biomechanics
+                                </div>
                             </div>
                         </div>
-                        <div class="member-meta">
-                            <div class="project-tag" onclick="filterByProject('proj-b5')"><i class="fas fa-layer-group"></i> In-House Physical Simulator &amp; Biomechanical Framework</div>
-                        </div>
-
-                        <!-- Work Thumbnail Showcase -->
-                        <div class="work-showcase">
-                            <div class="work-header">
-                                <span class="work-header-title"><i class="fas fa-image"></i> Current Research Spotlight</span>
+                        <div class="member-list-right">
+                            <div class="member-list-thumb-meta">
+                                <div class="member-list-thumb-title">Beneath the Skin</div>
+                                <span class="member-list-thumb-sub" onclick="openLightbox('teaser_V2.2_260901.jpg', 'Beneath the Skin: Biomechanical Facial Framework', 'Zhiyun (Richard) Peng', 'Overview of our composable co-expression framework propagating internal muscle dynamics directly to an epidermal skin layer.')">
+                                    <i class="fas fa-search-plus"></i> View Teaser
+                                </span>
                             </div>
-                            <div class="work-thumb-wrapper" onclick="openLightbox('teaser_V2.2_260901.jpg', 'Beneath the Skin: Biomechanical Facial Framework', 'Zhiyun (Richard) Peng', 'Overview of our composable co-expression framework propagating internal muscle dynamics directly to an epidermal skin layer.')">
-                                <img src="teaser_V2.2_260901.jpg" alt="Beneath the Skin Research Teaser" />
-                                <div class="work-hover-overlay"><i class="fas fa-search-plus"></i> View Full Teaser</div>
+                            <div class="member-list-thumb" onclick="openLightbox('teaser_V2.2_260901.jpg', 'Beneath the Skin: Biomechanical Facial Framework', 'Zhiyun (Richard) Peng', 'Overview of our composable co-expression framework propagating internal muscle dynamics directly to an epidermal skin layer.')">
+                                <img src="teaser_V2.2_260901.jpg" alt="Beneath the Skin Teaser" />
+                                <div class="thumb-zoom-badge"><i class="fas fa-search-plus"></i> View</div>
                             </div>
-                            <h4 class="work-caption-title">Beneath the Skin: Biomechanical Facial Framework</h4>
-                            <p class="work-caption-desc">Propagating internal muscle dynamics to epidermal skin layer via energy parsimony &amp; continuum physical simulation.</p>
-                        </div>
-
-                        <div class="card-footer">
-                            <a href="mailto:zpa18@sfu.ca" class="card-link-icon" title="Email"><i class="fas fa-envelope"></i></a>
-                            <a href="https://github.com/zhiyunrichardpeng" target="_blank" rel="noopener noreferrer" class="card-link-icon" title="GitHub"><i class="fab fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/zhiyun-richard-peng-585931150/" target="_blank" rel="noopener noreferrer" class="card-link-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                            <a href="https://scholar.google.com/citations?user=iv7O2RAAAAAJ" target="_blank" rel="noopener noreferrer" class="card-link-icon" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
                         </div>
                     </div>
                 </div>
 
-                <!-- 2. Project B1: Validating Physically Based Facial Animation via Biological Ground Truth -->
+                <!-- 2. Group Members List with Photos -->
                 <div class="section-header">
-                    <h2><i class="fas fa-x-ray" style="color: var(--accent-blue);"></i> Project B1: Biological Ground Truth (MRI &amp; sEMG)</h2>
+                    <h2><i class="fas fa-users" style="color: var(--accent-primary);"></i> Group Members</h2>
+                    <span class="section-count">Roster</span>
                 </div>
 
-                <div class="members-grid" id="projectB1Grid">
-                    <!-- Gurkaran Singh -->
-                    <div class="member-card" data-project="proj-b1" data-name="gurkaran singh">
-                        <div class="card-profile-header">
-                            <div class="member-avatar-box">
-                                <img src="images/members/gurkaran_singh.jpg" alt="Gurkaran Singh" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-                                <div class="avatar-fallback" style="display:none;">GS</div>
-                            </div>
-                            <div class="member-details">
-                                <h3 class="member-name">Gurkaran Singh</h3>
-                                <div class="member-affiliation">School of Computing Science, SFU</div>
-                            </div>
-                        </div>
-                        <div class="member-meta">
-                            <div class="project-tag" onclick="filterByProject('proj-b1')"><i class="fas fa-x-ray"></i> Biological Ground Truth &amp; Automated Error Metric Pipeline</div>
-                        </div>
-                        <div class="work-showcase">
-                            <div class="work-header">
-                                <span class="work-header-title"><i class="fas fa-image"></i> Current Work Thumbnail</span>
-                            </div>
-                            <div class="work-thumb-wrapper" onclick="openLightbox('images/work/work_mri.svg', 'Automated Error-Metric Pipeline', 'Gurkaran Singh', 'Developing an automated Python-based error-metric pipeline comparing simulated muscle activations against biological ground truth.')">
-                                <img src="images/work/work_mri.svg" alt="Error-Metric Pipeline" />
-                                <div class="work-hover-overlay"><i class="fas fa-search-plus"></i> Enlarge Preview</div>
-                            </div>
-                            <h4 class="work-caption-title">Automated Error-Metric Pipeline</h4>
-                            <p class="work-caption-desc">Building quantitative benchmark tools calculating precise deviations between simulated biomechanical paths and physiological recordings.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="mailto:zpa18@sfu.ca" class="card-link-icon" title="Email"><i class="fas fa-envelope"></i></a>
-                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="card-link-icon" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Viktor Zepeda Sanchez -->
-                    <div class="member-card" data-project="proj-b1 proj-b5" data-name="viktor zepeda sanchez">
-                        <div class="card-profile-header">
-                            <div class="member-avatar-box">
-                                <img src="images/members/viktor_zepeda.jpg" alt="Viktor Zepeda Sanchez" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-                                <div class="avatar-fallback" style="display:none;">VZ</div>
-                            </div>
-                            <div class="member-details">
-                                <h3 class="member-name">Viktor Zepeda Sanchez</h3>
-                                <div class="member-affiliation">School of Computing Science, SFU</div>
-                            </div>
-                        </div>
-                        <div class="member-meta">
-                            <div class="project-tag" onclick="filterByProject('proj-b1')"><i class="fas fa-x-ray"></i> Biological Ground Truth &amp; Physical Solver</div>
-                        </div>
-                        <div class="work-showcase">
-                            <div class="work-header">
-                                <span class="work-header-title"><i class="fas fa-image"></i> Current Work Thumbnail</span>
-                            </div>
-                            <div class="work-thumb-wrapper" onclick="openLightbox('images/work/work_mri.svg', 'In-Vivo Ground Truth & Dynamic MRI Alignment', 'Viktor Zepeda Sanchez', 'Aligning dynamic MRI datasets and defining in-vivo validation protocols to evaluate simulated structural integrity and energy dynamics.')">
-                                <img src="images/work/work_mri.svg" alt="Dynamic MRI Ground Truth" />
-                                <div class="work-hover-overlay"><i class="fas fa-search-plus"></i> Enlarge Preview</div>
-                            </div>
-                            <h4 class="work-caption-title">In-Vivo MRI Ground-Truth Protocol</h4>
-                            <p class="work-caption-desc">Mapping simulation structural integrity and tissue dynamics against dynamic MRI and sEMG physiological data.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="mailto:zpa18@sfu.ca" class="card-link-icon" title="Email"><i class="fas fa-envelope"></i></a>
-                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="card-link-icon" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Oleh Kutryk -->
-                    <div class="member-card" data-project="proj-b1" data-name="oleh kutryk">
-                        <div class="card-profile-header">
-                            <div class="member-avatar-box">
-                                <img src="images/members/oleh_kutryk.jpg" alt="Oleh Kutryk" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-                                <div class="avatar-fallback" style="display:none;">OK</div>
-                            </div>
-                            <div class="member-details">
-                                <h3 class="member-name">Oleh Kutryk</h3>
-                                <div class="member-affiliation">School of Computing Science, SFU</div>
-                            </div>
-                        </div>
-                        <div class="member-meta">
-                            <div class="project-tag" onclick="filterByProject('proj-b1')"><i class="fas fa-x-ray"></i> Biological Ground Truth &amp; sEMG Datasets</div>
-                        </div>
-                        <div class="work-showcase">
-                            <div class="work-header">
-                                <span class="work-header-title"><i class="fas fa-image"></i> Current Work Thumbnail</span>
-                            </div>
-                            <div class="work-thumb-wrapper" onclick="openLightbox('images/work/work_mri.svg', 'Physiological Muscle Firing Comparison', 'Oleh Kutryk', 'Evaluating simulated muscle activations against dynamic surface electromyography (sEMG) to verify physical grounding.')">
-                                <img src="images/work/work_mri.svg" alt="sEMG Validation" />
-                                <div class="work-hover-overlay"><i class="fas fa-search-plus"></i> Enlarge Preview</div>
-                            </div>
-                            <h4 class="work-caption-title">Physiological Muscle Firing Analysis</h4>
-                            <p class="work-caption-desc">Comparing simulated motor unit firing rates and activation trajectories against physiological ground-truth data.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="mailto:zpa18@sfu.ca" class="card-link-icon" title="Email"><i class="fas fa-envelope"></i></a>
-                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="card-link-icon" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Nikolay Deinego -->
-                    <div class="member-card" data-project="proj-b1" data-name="nikolay deinego">
-                        <div class="card-profile-header">
-                            <div class="member-avatar-box">
-                                <img src="images/members/nikolay_deinego.jpg" alt="Nikolay Deinego" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-                                <div class="avatar-fallback" style="display:none;">ND</div>
-                            </div>
-                            <div class="member-details">
-                                <h3 class="member-name">Nikolay Deinego</h3>
-                                <div class="member-affiliation">School of Computing Science, SFU</div>
-                            </div>
-                        </div>
-                        <div class="member-meta">
-                            <div class="project-tag" onclick="filterByProject('proj-b1')"><i class="fas fa-x-ray"></i> Volumetric MRI Registration &amp; Error Metrics</div>
-                        </div>
-                        <div class="work-showcase">
-                            <div class="work-header">
-                                <span class="work-header-title"><i class="fas fa-image"></i> Current Work Thumbnail</span>
-                            </div>
-                            <div class="work-thumb-wrapper" onclick="openLightbox('images/work/work_mri.svg', 'Volumetric MRI Soft-Tissue Alignment', 'Nikolay Deinego', 'Processing and segmenting 3D MRI volumetric datasets to validate internal facial muscle thickness and tissue displacement.')">
-                                <img src="images/work/work_mri.svg" alt="MRI Registration" />
-                                <div class="work-hover-overlay"><i class="fas fa-search-plus"></i> Enlarge Preview</div>
-                            </div>
-                            <h4 class="work-caption-title">Volumetric MRI Alignment</h4>
-                            <p class="work-caption-desc">Aligning volumetric MRI scans to calculate landmark displacement error metrics against empirical biological data.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="mailto:zpa18@sfu.ca" class="card-link-icon" title="Email"><i class="fas fa-envelope"></i></a>
-                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="card-link-icon" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 3. Project B2: Synthesizing Fine-Grained Facial Dynamics -->
-                <div class="section-header">
-                    <h2><i class="fas fa-theater-masks" style="color: var(--accent-purple);"></i> Project B2: Micro-Expressions &amp; Indigenous Phonemes</h2>
-                </div>
-
-                <div class="members-grid" id="projectB2Grid">
-                    <!-- Karl Onasa -->
-                    <div class="member-card" data-project="proj-b2" data-name="karl onasa">
-                        <div class="card-profile-header">
-                            <div class="member-avatar-box">
-                                <img src="images/members/karl_onasa.jpg" alt="Karl Onasa" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-                                <div class="avatar-fallback" style="display:none;">KO</div>
-                            </div>
-                            <div class="member-details">
-                                <h3 class="member-name">Karl Onasa</h3>
-                                <div class="member-affiliation">School of Computing Science, SFU</div>
-                            </div>
-                        </div>
-                        <div class="member-meta">
-                            <div class="project-tag" onclick="filterByProject('proj-b2')"><i class="fas fa-theater-masks"></i> Micro-Expressions &amp; Asymmetric Bursts</div>
-                        </div>
-                        <div class="work-showcase">
-                            <div class="work-header">
-                                <span class="work-header-title"><i class="fas fa-image"></i> Current Work Thumbnail</span>
-                            </div>
-                            <div class="work-thumb-wrapper" onclick="openLightbox('images/work/work_micro_expressions.svg', 'Micro-Expression Activation Modeling', 'Karl Onasa', 'Simulating involuntary micro-expressions like repressed smiles and brow furrows via asymmetric, high-frequency, low-duration muscle bursts.')">
-                                <img src="images/work/work_micro_expressions.svg" alt="Micro-Expressions" />
-                                <div class="work-hover-overlay"><i class="fas fa-search-plus"></i> Enlarge Preview</div>
-                            </div>
-                            <h4 class="work-caption-title">Micro-Expression Muscle Bursts</h4>
-                            <p class="work-caption-desc">Injecting high-frequency, low-duration muscle activations to simulate transient repressed affective states.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="mailto:zpa18@sfu.ca" class="card-link-icon" title="Email"><i class="fas fa-envelope"></i></a>
-                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="card-link-icon" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Ryan Marwaha -->
-                    <div class="member-card" data-project="proj-b2 proj-b5" data-name="ryan marwaha">
-                        <div class="card-profile-header">
-                            <div class="member-avatar-box">
-                                <img src="images/members/ryan_marwaha.jpg" alt="Ryan Marwaha" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-                                <div class="avatar-fallback" style="display:none;">RM</div>
-                            </div>
-                            <div class="member-details">
-                                <h3 class="member-name">Ryan Marwaha</h3>
-                                <div class="member-affiliation">School of Computing Science, SFU</div>
-                            </div>
-                        </div>
-                        <div class="member-meta">
-                            <div class="project-tag" onclick="filterByProject('proj-b2')"><i class="fas fa-theater-masks"></i> Fine-Grained Dynamics &amp; Solver Core</div>
-                        </div>
-                        <div class="work-showcase">
-                            <div class="work-header">
-                                <span class="work-header-title"><i class="fas fa-image"></i> Current Work Thumbnail</span>
-                            </div>
-                            <div class="work-thumb-wrapper" onclick="openLightbox('images/work/work_micro_expressions.svg', 'Temporal Strain & Jaw Dynamics', 'Ryan Marwaha', 'Evaluating physical parameters to accurately capture distinct skin, lip, and jaw dynamics without losing structural volume.')">
-                                <img src="images/work/work_micro_expressions.svg" alt="Temporal Strain Modeling" />
-                                <div class="work-hover-overlay"><i class="fas fa-search-plus"></i> Enlarge Preview</div>
-                            </div>
-                            <h4 class="work-caption-title">Temporal Strain &amp; Jaw Kinematics</h4>
-                            <p class="work-caption-desc">Measuring temporal strain distribution and jaw displacement against real human reference video footage.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="mailto:zpa18@sfu.ca" class="card-link-icon" title="Email"><i class="fas fa-envelope"></i></a>
-                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="card-link-icon" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Daiwik Marrott -->
-                    <div class="member-card" data-project="proj-b2" data-name="daiwik marrott">
-                        <div class="card-profile-header">
-                            <div class="member-avatar-box">
-                                <img src="images/members/daiwik_marrott.jpg" alt="Daiwik Marrott" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-                                <div class="avatar-fallback" style="display:none;">DM</div>
-                            </div>
-                            <div class="member-details">
-                                <h3 class="member-name">Daiwik Marrott</h3>
-                                <div class="member-affiliation">School of Computing Science, SFU</div>
-                            </div>
-                        </div>
-                        <div class="member-meta">
-                            <div class="project-tag" onclick="filterByProject('proj-b2')"><i class="fas fa-theater-masks"></i> Micro-Expressions &amp; Motor Unit Isolation</div>
-                        </div>
-                        <div class="work-showcase">
-                            <div class="work-header">
-                                <span class="work-header-title"><i class="fas fa-image"></i> Current Work Thumbnail</span>
-                            </div>
-                            <div class="work-thumb-wrapper" onclick="openLightbox('images/work/work_micro_expressions.svg', 'Motor Unit Isolation for Transient Expressions', 'Daiwik Marrott', 'Isolating specific motor unit activations required for fine-grained involuntary facial movements.')">
-                                <img src="images/work/work_micro_expressions.svg" alt="Motor Unit Isolation" />
-                                <div class="work-hover-overlay"><i class="fas fa-search-plus"></i> Enlarge Preview</div>
-                            </div>
-                            <h4 class="work-caption-title">Motor Unit Isolation &amp; Testing</h4>
-                            <p class="work-caption-desc">Building documented asset libraries of muscle activation parameters tailored for fine-grained movements.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="mailto:zpa18@sfu.ca" class="card-link-icon" title="Email"><i class="fas fa-envelope"></i></a>
-                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="card-link-icon" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Afraz Syed -->
-                    <div class="member-card" data-project="proj-b2" data-name="afraz syed afraz ali syed">
-                        <div class="card-profile-header">
-                            <div class="member-avatar-box">
-                                <img src="images/members/afraz_syed.jpg" alt="Afraz Syed" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-                                <div class="avatar-fallback" style="display:none;">AS</div>
-                            </div>
-                            <div class="member-details">
-                                <h3 class="member-name">Afraz Syed</h3>
-                                <div class="member-affiliation">School of Computing Science, SFU</div>
-                            </div>
-                        </div>
-                        <div class="member-meta">
-                            <div class="project-tag" onclick="filterByProject('proj-b2')"><i class="fas fa-microphone-alt"></i> Canadian Indigenous Phonetic Synthesis</div>
-                        </div>
-                        <div class="work-showcase">
-                            <div class="work-header">
-                                <span class="work-header-title"><i class="fas fa-image"></i> Current Work Thumbnail</span>
-                            </div>
-                            <div class="work-thumb-wrapper" onclick="openLightbox('images/work/work_phonemes.svg', 'Indigenous Phoneme Kinematics', 'Afraz Syed', 'Synthesizing unique phonetic inventories of Canadian Indigenous languages (Coast Salish, Hul’q’umi’num’) requiring specific lip-rounding and ejective facial tension.')">
-                                <img src="images/work/work_phonemes.svg" alt="Indigenous Phonemes" />
-                                <div class="work-hover-overlay"><i class="fas fa-search-plus"></i> Enlarge Preview</div>
-                            </div>
-                            <h4 class="work-caption-title">Indigenous Phoneme Kinematics</h4>
-                            <p class="work-caption-desc">Modeling specific lip-rounding and facial tension patterns for ejective consonant inventories in Indigenous languages.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="mailto:zpa18@sfu.ca" class="card-link-icon" title="Email"><i class="fas fa-envelope"></i></a>
-                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="card-link-icon" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Connor Churcott -->
-                    <div class="member-card" data-project="proj-b2" data-name="connor churcott">
-                        <div class="card-profile-header">
-                            <div class="member-avatar-box">
-                                <img src="images/members/connor_churcott.jpg" alt="Connor Churcott" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-                                <div class="avatar-fallback" style="display:none;">CC</div>
-                            </div>
-                            <div class="member-details">
-                                <h3 class="member-name">Connor Churcott</h3>
-                                <div class="member-affiliation">School of Computing Science, SFU</div>
-                            </div>
-                        </div>
-                        <div class="member-meta">
-                            <div class="project-tag" onclick="filterByProject('proj-b2')"><i class="fas fa-theater-masks"></i> Micro-Expressions &amp; Dynamic Wrinkles</div>
-                        </div>
-                        <div class="work-showcase">
-                            <div class="work-header">
-                                <span class="work-header-title"><i class="fas fa-image"></i> Current Work Thumbnail</span>
-                            </div>
-                            <div class="work-thumb-wrapper" onclick="openLightbox('images/work/work_micro_expressions.svg', 'High-Frequency Dynamic Wrinkles', 'Connor Churcott', 'Simulating transient micro-expression bursts and high-frequency soft-tissue deformation around periorbital muscles.')">
-                                <img src="images/work/work_micro_expressions.svg" alt="Micro-Expressions" />
-                                <div class="work-hover-overlay"><i class="fas fa-search-plus"></i> Enlarge Preview</div>
-                            </div>
-                            <h4 class="work-caption-title">High-Frequency Dynamic Wrinkles</h4>
-                            <p class="work-caption-desc">Investigating transient involuntary muscle impulses and subtle periorbital strain field evolution.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="mailto:zpa18@sfu.ca" class="card-link-icon" title="Email"><i class="fas fa-envelope"></i></a>
-                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="card-link-icon" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Neev Madaan -->
-                    <div class="member-card" data-project="proj-b2" data-name="neev madaan">
-                        <div class="card-profile-header">
-                            <div class="member-avatar-box">
-                                <img src="images/members/neev_madaan.jpg" alt="Neev Madaan" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-                                <div class="avatar-fallback" style="display:none;">NM</div>
-                            </div>
-                            <div class="member-details">
-                                <h3 class="member-name">Neev Madaan</h3>
-                                <div class="member-affiliation">School of Computing Science, SFU</div>
-                            </div>
-                        </div>
-                        <div class="member-meta">
-                            <div class="project-tag" onclick="filterByProject('proj-b2')"><i class="fas fa-microphone-alt"></i> Speech Phonemes &amp; Acoustic Synthesis</div>
-                        </div>
-                        <div class="work-showcase">
-                            <div class="work-header">
-                                <span class="work-header-title"><i class="fas fa-image"></i> Current Work Thumbnail</span>
-                            </div>
-                            <div class="work-thumb-wrapper" onclick="openLightbox('images/work/work_phonemes.svg', 'Acoustic-to-Muscle Phoneme Synthesis', 'Neev Madaan', 'Connecting audio speech spectrographic features to continuous physical motor controller activations for authentic lipsync.')">
-                                <img src="images/work/work_phonemes.svg" alt="Acoustic Articulation Synthesis" />
-                                <div class="work-hover-overlay"><i class="fas fa-search-plus"></i> Enlarge Preview</div>
-                            </div>
-                            <h4 class="work-caption-title">Acoustic Articulation Synthesis</h4>
-                            <p class="work-caption-desc">Extracting acoustic speech features to drive continuous biomechanical motor controllers for vocal articulations.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="mailto:zpa18@sfu.ca" class="card-link-icon" title="Email"><i class="fas fa-envelope"></i></a>
-                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="card-link-icon" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 4. Project B3: Automated 3D Asset Generation for Physically Based Facial Animation -->
-                <div class="section-header">
-                    <h2><i class="fas fa-cubes" style="color: var(--accent-amber);"></i> Project B3: Automated 3D Asset Generation</h2>
-                </div>
-
-                <div class="members-grid" id="projectB3Grid">
+                <div class="members-list-container" id="membersList">
+                    
                     <!-- Sophia Don Tranho -->
-                    <div class="member-card" data-project="proj-b3" data-name="sophia don tranho sophia">
-                        <div class="card-profile-header">
-                            <div class="member-avatar-box">
+                    <div class="member-list-item" data-project="proj-b3" data-name="sophia don tranho">
+                        <div class="member-list-left">
+                            <div class="member-list-avatar">
                                 <img src="images/members/sophia_don_tranho.jpg" alt="Sophia Don Tranho" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
                                 <div class="avatar-fallback" style="display:none;">ST</div>
                             </div>
-                            <div class="member-details">
-                                <h3 class="member-name">Sophia Don Tranho</h3>
-                                <div class="member-affiliation">School of Computing Science, SFU</div>
+                            <div class="member-list-info">
+                                <h3 class="member-list-name">Sophia Don Tranho</h3>
+                                <div class="member-list-affil"><span class="member-role-badge">Undergraduate Research Assistant</span> School of Computing Science, Simon Fraser University</div>
+                                <div class="member-list-project-tag" onclick="filterByProject('proj-b3')">
+                                    <i class="fas fa-cubes"></i> Project B3: Automated 3D Asset Generation
+                                </div>
                             </div>
                         </div>
-                        <div class="member-meta">
-                            <div class="project-tag" onclick="filterByProject('proj-b3')"><i class="fas fa-cubes"></i> Automated 3D Asset Construction &amp; Anchor Initialization</div>
-                        </div>
-                        <div class="work-showcase">
-                            <div class="work-header">
-                                <span class="work-header-title"><i class="fas fa-image"></i> Current Work Thumbnail</span>
+                        <div class="member-list-right">
+                            <div class="member-list-thumb-meta">
+                                <div class="member-list-thumb-title">Asset Initialization Tool</div>
+                                <span class="member-list-thumb-sub" onclick="openLightbox('images/work/work_asset_generation.svg', 'Automated 3D Asset Initialization Tool', 'Sophia Don Tranho', 'Developing prototype tool ingesting video/scans to output personalized muscle anchors and skin boundaries before physical simulation.')">
+                                    <i class="fas fa-search-plus"></i> View Work
+                                </span>
                             </div>
-                            <div class="work-thumb-wrapper" onclick="openLightbox('images/work/work_asset_generation.svg', 'Automated 3D Asset Initialization Tool', 'Sophia Don Tranho', 'Developing prototype tool ingesting video/scans to output personalized muscle anchors and skin boundaries before physical simulation.')">
+                            <div class="member-list-thumb" onclick="openLightbox('images/work/work_asset_generation.svg', 'Automated 3D Asset Initialization Tool', 'Sophia Don Tranho', 'Developing prototype tool ingesting video/scans to output personalized muscle anchors and skin boundaries before physical simulation.')">
                                 <img src="images/work/work_asset_generation.svg" alt="Asset Initialization Tool" />
-                                <div class="work-hover-overlay"><i class="fas fa-search-plus"></i> Enlarge Preview</div>
+                                <div class="thumb-zoom-badge"><i class="fas fa-search-plus"></i> View</div>
                             </div>
-                            <h4 class="work-caption-title">3D Asset Initialization Tool</h4>
-                            <p class="work-caption-desc">Automating the construction of personalized facial assets, skull dimensions, and rest muscle anchor points.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="mailto:zpa18@sfu.ca" class="card-link-icon" title="Email"><i class="fas fa-envelope"></i></a>
-                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="card-link-icon" title="GitHub"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
 
                     <!-- William Huang -->
-                    <div class="member-card" data-project="proj-b3" data-name="william huang">
-                        <div class="card-profile-header">
-                            <div class="member-avatar-box">
+                    <div class="member-list-item" data-project="proj-b3" data-name="william huang">
+                        <div class="member-list-left">
+                            <div class="member-list-avatar">
                                 <img src="images/members/william_huang.jpg" alt="William Huang" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
                                 <div class="avatar-fallback" style="display:none;">WH</div>
                             </div>
-                            <div class="member-details">
-                                <h3 class="member-name">William Huang</h3>
-                                <div class="member-affiliation">School of Computing Science, SFU</div>
+                            <div class="member-list-info">
+                                <h3 class="member-list-name">William Huang</h3>
+                                <div class="member-list-affil"><span class="member-role-badge">Undergraduate Research Assistant</span> School of Computing Science, Simon Fraser University</div>
+                                <div class="member-list-project-tag" onclick="filterByProject('proj-b3')">
+                                    <i class="fas fa-video"></i> Project B3: Automated 3D Asset Generation
+                                </div>
                             </div>
                         </div>
-                        <div class="member-meta">
-                            <div class="project-tag" onclick="filterByProject('proj-b3')"><i class="fas fa-video"></i> Vision Pipeline &amp; Monocular Tracking</div>
-                        </div>
-                        <div class="work-showcase">
-                            <div class="work-header">
-                                <span class="work-header-title"><i class="fas fa-image"></i> Current Work Thumbnail</span>
+                        <div class="member-list-right">
+                            <div class="member-list-thumb-meta">
+                                <div class="member-list-thumb-title">Vision Tracking Pipeline</div>
+                                <span class="member-list-thumb-sub" onclick="openLightbox('images/work/work_asset_generation.svg', 'Monocular Vision & Landmark Tracking Pipeline', 'William Huang', 'Building a lightweight vision pipeline using smartphone video and MediaPipe tracking to infer skull dimensions and skin mesh boundary initialization.')">
+                                    <i class="fas fa-search-plus"></i> View Work
+                                </span>
                             </div>
-                            <div class="work-thumb-wrapper" onclick="openLightbox('images/work/work_asset_generation.svg', 'Monocular Vision & Landmark Tracking Pipeline', 'William Huang', 'Building a lightweight vision pipeline using smartphone video and MediaPipe tracking to infer skull dimensions and skin mesh boundary initialization.')">
-                                <img src="images/work/work_asset_generation.svg" alt="Monocular Vision Pipeline" />
-                                <div class="work-hover-overlay"><i class="fas fa-search-plus"></i> Enlarge Preview</div>
+                            <div class="member-list-thumb" onclick="openLightbox('images/work/work_asset_generation.svg', 'Monocular Vision & Landmark Tracking Pipeline', 'William Huang', 'Building a lightweight vision pipeline using smartphone video and MediaPipe tracking to infer skull dimensions and skin mesh boundary initialization.')">
+                                <img src="images/work/work_asset_generation.svg" alt="Vision Tracking Pipeline" />
+                                <div class="thumb-zoom-badge"><i class="fas fa-search-plus"></i> View</div>
                             </div>
-                            <h4 class="work-caption-title">Monocular Landmark Pipeline</h4>
-                            <p class="work-caption-desc">Comparing accessible RGB video estimation against volumetric scan generation to scale personalized avatar setup.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="mailto:zpa18@sfu.ca" class="card-link-icon" title="Email"><i class="fas fa-envelope"></i></a>
-                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="card-link-icon" title="GitHub"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
-                </div>
 
-                <!-- 5. Project A1: Automated Pipeline for Skin-to-Muscle Registration for the Whole Head -->
-                <div class="section-header">
-                    <h2><i class="fas fa-draw-polygon" style="color: var(--accent-emerald);"></i> Project A1: Skin-to-Muscle Registration</h2>
-                </div>
+                    <!-- Kissinger Chen -->
+                    <div class="member-list-item" data-project="proj-b1 proj-b3" data-name="kissinger chen">
+                        <div class="member-list-left">
+                            <div class="member-list-avatar">
+                                <img src="images/members/kissinger_chen.jpg" alt="Kissinger Chen" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                                <div class="avatar-fallback" style="display:none;">KC</div>
+                            </div>
+                            <div class="member-list-info">
+                                <h3 class="member-list-name">Kissinger Chen</h3>
+                                <div class="member-list-affil">School of Computing Science, Simon Fraser University</div>
+                                <div class="member-list-project-tag" onclick="filterByProject('proj-b1')">
+                                    <i class="fas fa-stethoscope"></i> Project B1 &amp; B3: Ground Truth &amp; 3D Assets
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-list-right">
+                            <div class="member-list-thumb-meta">
+                                <div class="member-list-thumb-title">Biological Ground Truth &amp; 3D Assets</div>
+                                <span class="member-list-thumb-sub" onclick="openLightbox('images/work/work_mri.svg', 'Biological Ground Truth Validation &amp; 3D Assets', 'Kissinger Chen', 'Contributing to quantitative physiological benchmarks and asset generation workflows for biomechanical facial animation.')">
+                                    <i class="fas fa-search-plus"></i> View Work
+                                </span>
+                            </div>
+                            <div class="member-list-thumb" onclick="openLightbox('images/work/work_mri.svg', 'Biological Ground Truth Validation &amp; 3D Assets', 'Kissinger Chen', 'Contributing to quantitative physiological benchmarks and asset generation workflows for biomechanical facial animation.')">
+                                <img src="images/work/work_mri.svg" alt="Kissinger Chen Work Thumbnail" />
+                                <div class="thumb-zoom-badge"><i class="fas fa-search-plus"></i> View</div>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="members-grid" id="projectA1Grid">
+                    <!-- Karl Onasa -->
+                    <div class="member-list-item" data-project="proj-b2" data-name="karl onasa">
+                        <div class="member-list-left">
+                            <div class="member-list-avatar">
+                                <img src="images/members/karl_onasa.jpg" alt="Karl Onasa" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                                <div class="avatar-fallback" style="display:none;">KO</div>
+                            </div>
+                            <div class="member-list-info">
+                                <h3 class="member-list-name">Karl Onasa</h3>
+                                <div class="member-list-affil">School of Computing Science, Simon Fraser University</div>
+                                <div class="member-list-project-tag" onclick="filterByProject('proj-b2')">
+                                    <i class="fas fa-theater-masks"></i> Project B2: Micro-Expressions &amp; Indigenous Phonemes
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-list-right">
+                            <div class="member-list-thumb-meta">
+                                <div class="member-list-thumb-title">Micro-Expression Bursts</div>
+                                <span class="member-list-thumb-sub" onclick="openLightbox('images/work/work_micro_expressions.svg', 'Micro-Expression Activation Modeling', 'Karl Onasa', 'Simulating involuntary micro-expressions like repressed smiles and brow furrows via asymmetric, high-frequency, low-duration muscle bursts.')">
+                                    <i class="fas fa-search-plus"></i> View Work
+                                </span>
+                            </div>
+                            <div class="member-list-thumb" onclick="openLightbox('images/work/work_micro_expressions.svg', 'Micro-Expression Activation Modeling', 'Karl Onasa', 'Simulating involuntary micro-expressions like repressed smiles and brow furrows via asymmetric, high-frequency, low-duration muscle bursts.')">
+                                <img src="images/work/work_micro_expressions.svg" alt="Micro-Expressions" />
+                                <div class="thumb-zoom-badge"><i class="fas fa-search-plus"></i> View</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ryan Marwaha -->
+                    <div class="member-list-item" data-project="proj-b2 proj-b5" data-name="ryan marwaha">
+                        <div class="member-list-left">
+                            <div class="member-list-avatar">
+                                <img src="images/members/ryan_marwaha.jpg" alt="Ryan Marwaha" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                                <div class="avatar-fallback" style="display:none;">RM</div>
+                            </div>
+                            <div class="member-list-info">
+                                <h3 class="member-list-name">Ryan Marwaha</h3>
+                                <div class="member-list-affil">School of Computing Science, Simon Fraser University</div>
+                                <div class="member-list-project-tag" onclick="filterByProject('proj-b2')">
+                                    <i class="fas fa-theater-masks"></i> Project B2 &amp; B5: Fine Dynamics &amp; Solver Core
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-list-right">
+                            <div class="member-list-thumb-meta">
+                                <div class="member-list-thumb-title">Temporal Strain Modeling</div>
+                                <span class="member-list-thumb-sub" onclick="openLightbox('images/work/work_micro_expressions.svg', 'Temporal Strain & Jaw Dynamics', 'Ryan Marwaha', 'Evaluating physical parameters to accurately capture distinct skin, lip, and jaw dynamics without losing structural volume.')">
+                                    <i class="fas fa-search-plus"></i> View Work
+                                </span>
+                            </div>
+                            <div class="member-list-thumb" onclick="openLightbox('images/work/work_micro_expressions.svg', 'Temporal Strain & Jaw Dynamics', 'Ryan Marwaha', 'Evaluating physical parameters to accurately capture distinct skin, lip, and jaw dynamics without losing structural volume.')">
+                                <img src="images/work/work_micro_expressions.svg" alt="Temporal Strain" />
+                                <div class="thumb-zoom-badge"><i class="fas fa-search-plus"></i> View</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Daiwik Marrott -->
+                    <div class="member-list-item" data-project="proj-b2" data-name="daiwik marrott">
+                        <div class="member-list-left">
+                            <div class="member-list-avatar">
+                                <img src="images/members/daiwik_marrott.jpg" alt="Daiwik Marrott" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                                <div class="avatar-fallback" style="display:none;">DM</div>
+                            </div>
+                            <div class="member-list-info">
+                                <h3 class="member-list-name">Daiwik Marrott</h3>
+                                <div class="member-list-affil">School of Computing Science, Simon Fraser University</div>
+                                <div class="member-list-project-tag" onclick="filterByProject('proj-b2')">
+                                    <i class="fas fa-theater-masks"></i> Project B2: Micro-Expressions &amp; Motor Unit Isolation
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-list-right">
+                            <div class="member-list-thumb-meta">
+                                <div class="member-list-thumb-title">Motor Unit Isolation</div>
+                                <span class="member-list-thumb-sub" onclick="openLightbox('images/work/work_micro_expressions.svg', 'Motor Unit Isolation for Transient Expressions', 'Daiwik Marrott', 'Isolating specific motor unit activations required for fine-grained involuntary facial movements.')">
+                                    <i class="fas fa-search-plus"></i> View Work
+                                </span>
+                            </div>
+                            <div class="member-list-thumb" onclick="openLightbox('images/work/work_micro_expressions.svg', 'Motor Unit Isolation for Transient Expressions', 'Daiwik Marrott', 'Isolating specific motor unit activations required for fine-grained involuntary facial movements.')">
+                                <img src="images/work/work_micro_expressions.svg" alt="Motor Unit Isolation" />
+                                <div class="thumb-zoom-badge"><i class="fas fa-search-plus"></i> View</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Afraz Syed -->
+                    <div class="member-list-item" data-project="proj-b2" data-name="afraz syed">
+                        <div class="member-list-left">
+                            <div class="member-list-avatar">
+                                <img src="images/members/afraz_syed.jpg" alt="Afraz Syed" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                                <div class="avatar-fallback" style="display:none;">AS</div>
+                            </div>
+                            <div class="member-list-info">
+                                <h3 class="member-list-name">Afraz Syed</h3>
+                                <div class="member-list-affil">School of Computing Science, Simon Fraser University</div>
+                                <div class="member-list-project-tag" onclick="filterByProject('proj-b2')">
+                                    <i class="fas fa-microphone-alt"></i> Project B2: Canadian Indigenous Phonetic Synthesis
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-list-right">
+                            <div class="member-list-thumb-meta">
+                                <div class="member-list-thumb-title">Indigenous Phonemes</div>
+                                <span class="member-list-thumb-sub" onclick="openLightbox('images/work/work_phonemes.svg', 'Indigenous Phoneme Kinematics', 'Afraz Syed', 'Synthesizing unique phonetic inventories of Canadian Indigenous languages (Coast Salish, Hul’q’umi’num’) requiring specific lip-rounding and ejective facial tension.')">
+                                    <i class="fas fa-search-plus"></i> View Work
+                                </span>
+                            </div>
+                            <div class="member-list-thumb" onclick="openLightbox('images/work/work_phonemes.svg', 'Indigenous Phoneme Kinematics', 'Afraz Syed', 'Synthesizing unique phonetic inventories of Canadian Indigenous languages (Coast Salish, Hul’q’umi’num’) requiring specific lip-rounding and ejective facial tension.')">
+                                <img src="images/work/work_phonemes.svg" alt="Indigenous Phonemes" />
+                                <div class="thumb-zoom-badge"><i class="fas fa-search-plus"></i> View</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gurkaran Singh -->
+                    <div class="member-list-item" data-project="proj-b1" data-name="gurkaran singh">
+                        <div class="member-list-left">
+                            <div class="member-list-avatar">
+                                <img src="images/members/gurkaran_singh.jpg" alt="Gurkaran Singh" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                                <div class="avatar-fallback" style="display:none;">GS</div>
+                            </div>
+                            <div class="member-list-info">
+                                <h3 class="member-list-name">Gurkaran Singh</h3>
+                                <div class="member-list-affil">School of Computing Science, Simon Fraser University</div>
+                                <div class="member-list-project-tag" onclick="filterByProject('proj-b1')">
+                                    <i class="fas fa-x-ray"></i> Project B1: Biological Ground Truth &amp; Error Metrics
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-list-right">
+                            <div class="member-list-thumb-meta">
+                                <div class="member-list-thumb-title">Error-Metric Pipeline</div>
+                                <span class="member-list-thumb-sub" onclick="openLightbox('images/work/work_mri.svg', 'Automated Error-Metric Pipeline', 'Gurkaran Singh', 'Developing an automated Python-based error-metric pipeline comparing simulated muscle activations against biological ground truth.')">
+                                    <i class="fas fa-search-plus"></i> View Work
+                                </span>
+                            </div>
+                            <div class="member-list-thumb" onclick="openLightbox('images/work/work_mri.svg', 'Automated Error-Metric Pipeline', 'Gurkaran Singh', 'Developing an automated Python-based error-metric pipeline comparing simulated muscle activations against biological ground truth.')">
+                                <img src="images/work/work_mri.svg" alt="Error-Metric Pipeline" />
+                                <div class="thumb-zoom-badge"><i class="fas fa-search-plus"></i> View</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Viktor Zepeda Sanchez -->
+                    <div class="member-list-item" data-project="proj-b1 proj-b5" data-name="viktor zepeda sanchez">
+                        <div class="member-list-left">
+                            <div class="member-list-avatar">
+                                <img src="images/members/viktor_zepeda.jpg" alt="Viktor Zepeda Sanchez" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                                <div class="avatar-fallback" style="display:none;">VZ</div>
+                            </div>
+                            <div class="member-list-info">
+                                <h3 class="member-list-name">Viktor Zepeda Sanchez</h3>
+                                <div class="member-list-affil">School of Computing Science, Simon Fraser University</div>
+                                <div class="member-list-project-tag" onclick="filterByProject('proj-b1')">
+                                    <i class="fas fa-x-ray"></i> Project B1 &amp; B5: Ground Truth &amp; Solver
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-list-right">
+                            <div class="member-list-thumb-meta">
+                                <div class="member-list-thumb-title">In-Vivo MRI Protocol</div>
+                                <span class="member-list-thumb-sub" onclick="openLightbox('images/work/work_mri.svg', 'In-Vivo Ground Truth & Dynamic MRI Alignment', 'Viktor Zepeda Sanchez', 'Aligning dynamic MRI datasets and defining in-vivo validation protocols to evaluate simulated structural integrity and energy dynamics.')">
+                                    <i class="fas fa-search-plus"></i> View Work
+                                </span>
+                            </div>
+                            <div class="member-list-thumb" onclick="openLightbox('images/work/work_mri.svg', 'In-Vivo Ground Truth & Dynamic MRI Alignment', 'Viktor Zepeda Sanchez', 'Aligning dynamic MRI datasets and defining in-vivo validation protocols to evaluate simulated structural integrity and energy dynamics.')">
+                                <img src="images/work/work_mri.svg" alt="Dynamic MRI Ground Truth" />
+                                <div class="thumb-zoom-badge"><i class="fas fa-search-plus"></i> View</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Oleh Kutryk -->
+                    <div class="member-list-item" data-project="proj-b1" data-name="oleh kutryk">
+                        <div class="member-list-left">
+                            <div class="member-list-avatar">
+                                <img src="images/members/oleh_kutryk.jpg" alt="Oleh Kutryk" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                                <div class="avatar-fallback" style="display:none;">OK</div>
+                            </div>
+                            <div class="member-list-info">
+                                <h3 class="member-list-name">Oleh Kutryk</h3>
+                                <div class="member-list-affil">School of Computing Science, Simon Fraser University</div>
+                                <div class="member-list-project-tag" onclick="filterByProject('proj-b1')">
+                                    <i class="fas fa-x-ray"></i> Project B1: Biological Ground Truth &amp; sEMG Datasets
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-list-right">
+                            <div class="member-list-thumb-meta">
+                                <div class="member-list-thumb-title">sEMG Firing Analysis</div>
+                                <span class="member-list-thumb-sub" onclick="openLightbox('images/work/work_mri.svg', 'Physiological Muscle Firing Comparison', 'Oleh Kutryk', 'Evaluating simulated muscle activations against dynamic surface electromyography (sEMG) to verify physical grounding.')">
+                                    <i class="fas fa-search-plus"></i> View Work
+                                </span>
+                            </div>
+                            <div class="member-list-thumb" onclick="openLightbox('images/work/work_mri.svg', 'Physiological Muscle Firing Comparison', 'Oleh Kutryk', 'Evaluating simulated muscle activations against dynamic surface electromyography (sEMG) to verify physical grounding.')">
+                                <img src="images/work/work_mri.svg" alt="sEMG Validation" />
+                                <div class="thumb-zoom-badge"><i class="fas fa-search-plus"></i> View</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nikolay Deinego -->
+                    <div class="member-list-item" data-project="proj-b1" data-name="nikolay deinego">
+                        <div class="member-list-left">
+                            <div class="member-list-avatar">
+                                <img src="images/members/nikolay_deinego.jpg" alt="Nikolay Deinego" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                                <div class="avatar-fallback" style="display:none;">ND</div>
+                            </div>
+                            <div class="member-list-info">
+                                <h3 class="member-list-name">Nikolay Deinego</h3>
+                                <div class="member-list-affil">School of Computing Science, Simon Fraser University</div>
+                                <div class="member-list-project-tag" onclick="filterByProject('proj-b1')">
+                                    <i class="fas fa-x-ray"></i> Project B1: Volumetric MRI Registration
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-list-right">
+                            <div class="member-list-thumb-meta">
+                                <div class="member-list-thumb-title">Volumetric Alignment</div>
+                                <span class="member-list-thumb-sub" onclick="openLightbox('images/work/work_mri.svg', 'Volumetric MRI Soft-Tissue Alignment', 'Nikolay Deinego', 'Processing and segmenting 3D MRI volumetric datasets to validate internal facial muscle thickness and tissue displacement.')">
+                                    <i class="fas fa-search-plus"></i> View Work
+                                </span>
+                            </div>
+                            <div class="member-list-thumb" onclick="openLightbox('images/work/work_mri.svg', 'Volumetric MRI Soft-Tissue Alignment', 'Nikolay Deinego', 'Processing and segmenting 3D MRI volumetric datasets to validate internal facial muscle thickness and tissue displacement.')">
+                                <img src="images/work/work_mri.svg" alt="MRI Registration" />
+                                <div class="thumb-zoom-badge"><i class="fas fa-search-plus"></i> View</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Yaoting Wang -->
+                    <div class="member-list-item" data-project="proj-b5 proj-b4-b5" data-name="yaoting wang">
+                        <div class="member-list-left">
+                            <div class="member-list-avatar">
+                                <img src="images/members/yaoting_wang.jpg" alt="Yaoting Wang" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                                <div class="avatar-fallback" style="display:none;">YW</div>
+                            </div>
+                            <div class="member-list-info">
+                                <h3 class="member-list-name">Yaoting Wang</h3>
+                                <div class="member-list-affil">School of Computing Science, Simon Fraser University</div>
+                                <div class="member-list-project-tag" onclick="filterByProject('proj-b5')">
+                                    <i class="fas fa-cogs"></i> Project B5: In-House Physical Simulator Core
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-list-right">
+                            <div class="member-list-thumb-meta">
+                                <div class="member-list-thumb-title">In-House XPBD/FEM Solver</div>
+                                <span class="member-list-thumb-sub" onclick="openLightbox('images/work/work_solver.svg', 'In-House Soft-Tissue Physical Simulator Core', 'Yaoting Wang', 'Developing core numerical solver pipelines, volume preservation constraints, and hyperelastic tissue simulation.')">
+                                    <i class="fas fa-search-plus"></i> View Work
+                                </span>
+                            </div>
+                            <div class="member-list-thumb" onclick="openLightbox('images/work/work_solver.svg', 'In-House Soft-Tissue Physical Simulator Core', 'Yaoting Wang', 'Developing core numerical solver pipelines, volume preservation constraints, and hyperelastic tissue simulation.')">
+                                <img src="images/work/work_solver.svg" alt="Physical Solver Core" />
+                                <div class="thumb-zoom-badge"><i class="fas fa-search-plus"></i> View</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Neev Madaan -->
+                    <div class="member-list-item" data-project="proj-b2" data-name="neev madaan">
+                        <div class="member-list-left">
+                            <div class="member-list-avatar">
+                                <img src="images/members/neev_madaan.jpg" alt="Neev Madaan" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                                <div class="avatar-fallback" style="display:none;">NM</div>
+                            </div>
+                            <div class="member-list-info">
+                                <h3 class="member-list-name">Neev Madaan</h3>
+                                <div class="member-list-affil">School of Computing Science, Simon Fraser University</div>
+                                <div class="member-list-project-tag" onclick="filterByProject('proj-b2')">
+                                    <i class="fas fa-microphone-alt"></i> Project B2: Speech Phonemes &amp; Acoustic Synthesis
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-list-right">
+                            <div class="member-list-thumb-meta">
+                                <div class="member-list-thumb-title">Acoustic Articulation</div>
+                                <span class="member-list-thumb-sub" onclick="openLightbox('images/work/work_phonemes.svg', 'Acoustic-to-Muscle Phoneme Synthesis', 'Neev Madaan', 'Connecting audio speech spectrographic features to continuous physical motor controller activations for authentic lipsync.')">
+                                    <i class="fas fa-search-plus"></i> View Work
+                                </span>
+                            </div>
+                            <div class="member-list-thumb" onclick="openLightbox('images/work/work_phonemes.svg', 'Acoustic-to-Muscle Phoneme Synthesis', 'Neev Madaan', 'Connecting audio speech spectrographic features to continuous physical motor controller activations for authentic lipsync.')">
+                                <img src="images/work/work_phonemes.svg" alt="Acoustic Articulation" />
+                                <div class="thumb-zoom-badge"><i class="fas fa-search-plus"></i> View</div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Qiu Shi -->
-                    <div class="member-card" data-project="proj-a1" data-name="qiu shi">
-                        <div class="card-profile-header">
-                            <div class="member-avatar-box">
+                    <div class="member-list-item" data-project="proj-a1" data-name="qiu shi">
+                        <div class="member-list-left">
+                            <div class="member-list-avatar">
                                 <img src="images/members/qiu_shi.jpg" alt="Qiu Shi" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
                                 <div class="avatar-fallback" style="display:none;">QS</div>
                             </div>
-                            <div class="member-details">
-                                <h3 class="member-name">Qiu Shi</h3>
-                                <div class="member-affiliation">School of Computing Science, SFU</div>
+                            <div class="member-list-info">
+                                <h3 class="member-list-name">Qiu Shi</h3>
+                                <div class="member-list-affil">School of Computing Science, Simon Fraser University</div>
+                                <div class="member-list-project-tag" onclick="filterByProject('proj-a1')">
+                                    <i class="fas fa-draw-polygon"></i> Project A1: Non-Rigid Skin-to-Muscle Registration
+                                </div>
                             </div>
                         </div>
-                        <div class="member-meta">
-                            <div class="project-tag" onclick="filterByProject('proj-a1')"><i class="fas fa-draw-polygon"></i> Non-Rigid ICP &amp; Laplacian Surface Alignment</div>
-                        </div>
-                        <div class="work-showcase">
-                            <div class="work-header">
-                                <span class="work-header-title"><i class="fas fa-image"></i> Current Work Thumbnail</span>
+                        <div class="member-list-right">
+                            <div class="member-list-thumb-meta">
+                                <div class="member-list-thumb-title">Non-Rigid ICP Registration</div>
+                                <span class="member-list-thumb-sub" onclick="openLightbox('images/work/work_asset_generation.svg', 'Automated Non-Rigid Registration Tool', 'Qiu Shi', 'Developing automated Python/C++ tools for non-rigid ICP skin shrink-wrapping over customized internal musculature.')">
+                                    <i class="fas fa-search-plus"></i> View Work
+                                </span>
                             </div>
-                            <div class="work-thumb-wrapper" onclick="openLightbox('images/work/work_asset_generation.svg', 'Automated Non-Rigid Registration Tool', 'Qiu Shi', 'Developing automated Python/C++ tools for non-rigid ICP skin shrink-wrapping over customized internal musculature.')">
+                            <div class="member-list-thumb" onclick="openLightbox('images/work/work_asset_generation.svg', 'Automated Non-Rigid Registration Tool', 'Qiu Shi', 'Developing automated Python/C++ tools for non-rigid ICP skin shrink-wrapping over customized internal musculature.')">
                                 <img src="images/work/work_asset_generation.svg" alt="Non-Rigid Registration" />
-                                <div class="work-hover-overlay"><i class="fas fa-search-plus"></i> Enlarge Preview</div>
+                                <div class="thumb-zoom-badge"><i class="fas fa-search-plus"></i> View</div>
                             </div>
-                            <h4 class="work-caption-title">Non-Rigid ICP Registration</h4>
-                            <p class="work-caption-desc">Replacing manual software setup by automating skin-to-muscle volumetric shrink-wrapping algorithms.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="mailto:zpa18@sfu.ca" class="card-link-icon" title="Email"><i class="fas fa-envelope"></i></a>
-                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="card-link-icon" title="GitHub"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
 
-                    <!-- Sevy Veeken -->
-                    <div class="member-card" data-project="proj-a1" data-name="sevy veeken">
-                        <div class="card-profile-header">
-                            <div class="member-avatar-box">
-                                <img src="images/members/sevy_veeken.jpg" alt="Sevy Veeken" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-                                <div class="avatar-fallback" style="display:none;">SV</div>
-                            </div>
-                            <div class="member-details">
-                                <h3 class="member-name">Sevy Veeken</h3>
-                                <div class="member-affiliation">School of Computing Science, SFU</div>
-                            </div>
-                        </div>
-                        <div class="member-meta">
-                            <div class="project-tag" onclick="filterByProject('proj-a1')"><i class="fas fa-draw-polygon"></i> Whole-Head Skin Wrapping Pipeline</div>
-                        </div>
-                        <div class="work-showcase">
-                            <div class="work-header">
-                                <span class="work-header-title"><i class="fas fa-image"></i> Current Work Thumbnail</span>
-                            </div>
-                            <div class="work-thumb-wrapper" onclick="openLightbox('images/work/work_asset_generation.svg', 'Whole-Head Epidermal Mesh Alignment', 'Sevy Veeken', 'Benchmarking automated registration speedup and geometric accuracy against manual rigging baselines.')">
-                                <img src="images/work/work_asset_generation.svg" alt="Whole-Head Registration" />
-                                <div class="work-hover-overlay"><i class="fas fa-search-plus"></i> Enlarge Preview</div>
-                            </div>
-                            <h4 class="work-caption-title">Whole-Head Alignment Pipeline</h4>
-                            <p class="work-caption-desc">Transitioning from manual artistry to algorithmic tools that reduce hours of mesh alignment to minutes.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="mailto:zpa18@sfu.ca" class="card-link-icon" title="Email"><i class="fas fa-envelope"></i></a>
-                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="card-link-icon" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- 6. Project B4: Develop Physical Simulator & IdeaVibes SOTA LLM Competition -->
-                <div class="section-header">
-                    <h2><i class="fas fa-desktop" style="color: var(--accent-primary);"></i> Project B4: Develop Physical Simulator (IdeaVibes Competition)</h2>
-                </div>
 
-                <div class="members-grid" id="projectB4Grid">
                     <!-- Feifei Yu (Faye) -->
-                    <div class="member-card" data-project="proj-b4" data-name="feifei yu faye">
-                        <div class="card-profile-header">
-                            <div class="member-avatar-box">
+                    <div class="member-list-item" data-project="proj-b4" data-name="feifei yu faye">
+                        <div class="member-list-left">
+                            <div class="member-list-avatar">
                                 <img src="images/members/feifei_yu.jpg" alt="Feifei Yu (Faye)" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
                                 <div class="avatar-fallback" style="display:none;">FY</div>
                             </div>
-                            <div class="member-details">
-                                <h3 class="member-name">Feifei Yu (Faye)</h3>
-                                <div class="member-affiliation">School of Computing Science, SFU</div>
+                            <div class="member-list-info">
+                                <h3 class="member-list-name">Feifei Yu (Faye)</h3>
+                                <div class="member-list-affil">School of Computing Science, Simon Fraser University</div>
+                                <div class="member-list-project-tag" onclick="filterByProject('proj-b4')">
+                                    <i class="fas fa-desktop"></i> Project B4: Interactive Web Demo &amp; IdeaVibes
+                                </div>
                             </div>
                         </div>
-                        <div class="member-meta">
-                            <div class="project-tag" onclick="filterByProject('proj-b4')"><i class="fas fa-desktop"></i> Interactive Web Demo &amp; SOTA LLM Querying</div>
-                        </div>
-                        <div class="work-showcase">
-                            <div class="work-header">
-                                <span class="work-header-title"><i class="fas fa-image"></i> Current Work Thumbnail</span>
+                        <div class="member-list-right">
+                            <div class="member-list-thumb-meta">
+                                <div class="member-list-thumb-title">Interactive Web Demo</div>
+                                <span class="member-list-thumb-sub" onclick="openLightbox('images/work/work_interactive_demo.svg', 'Online Interactive Facial Demo & Prototype', 'Feifei Yu (Faye)', 'Mounting full physical simulation to the interactive web demo while maintaining real-time simulation speeds.')">
+                                    <i class="fas fa-search-plus"></i> View Work
+                                </span>
                             </div>
-                            <div class="work-thumb-wrapper" onclick="openLightbox('images/work/work_interactive_demo.svg', 'Online Interactive Facial Demo & Prototype', 'Feifei Yu (Faye)', 'Mounting full physical simulation to the interactive web demo while maintaining real-time simulation speeds.')">
+                            <div class="member-list-thumb" onclick="openLightbox('images/work/work_interactive_demo.svg', 'Online Interactive Facial Demo & Prototype', 'Feifei Yu (Faye)', 'Mounting full physical simulation to the interactive web demo while maintaining real-time simulation speeds.')">
                                 <img src="images/work/work_interactive_demo.svg" alt="Interactive Web Demo" />
-                                <div class="work-hover-overlay"><i class="fas fa-search-plus"></i> Enlarge Preview</div>
+                                <div class="thumb-zoom-badge"><i class="fas fa-search-plus"></i> View</div>
                             </div>
-                            <h4 class="work-caption-title">Interactive WebGL Facial Demo</h4>
-                            <p class="work-caption-desc">Mounting physically driven facial controllers into the browser client and preparing entrepreneur competition deliverables.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="mailto:zpa18@sfu.ca" class="card-link-icon" title="Email"><i class="fas fa-envelope"></i></a>
-                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="card-link-icon" title="GitHub"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
 
                     <!-- Ilian Khankhalaev -->
-                    <div class="member-card" data-project="proj-b4" data-name="ilian khankhalaev ika34">
-                        <div class="card-profile-header">
-                            <div class="member-avatar-box">
+                    <div class="member-list-item" data-project="proj-b4" data-name="ilian khankhalaev ika34">
+                        <div class="member-list-left">
+                            <div class="member-list-avatar">
                                 <img src="images/members/ilian_khankhalaev.jpg" alt="Ilian Khankhalaev" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
                                 <div class="avatar-fallback" style="display:none;">IK</div>
                             </div>
-                            <div class="member-details">
-                                <h3 class="member-name">Ilian Khankhalaev</h3>
-                                <div class="member-affiliation">School of Computing Science, SFU</div>
+                            <div class="member-list-info">
+                                <h3 class="member-list-name">Ilian Khankhalaev</h3>
+                                <div class="member-list-affil">School of Computing Science, Simon Fraser University</div>
+                                <div class="member-list-project-tag" onclick="filterByProject('proj-b4')">
+                                    <i class="fas fa-desktop"></i> Project B4: Web Simulator Architecture
+                                </div>
                             </div>
                         </div>
-                        <div class="member-meta">
-                            <div class="project-tag" onclick="filterByProject('proj-b4')"><i class="fas fa-desktop"></i> Physical Simulator Architecture &amp; Repository Migration</div>
-                        </div>
-                        <div class="work-showcase">
-                            <div class="work-header">
-                                <span class="work-header-title"><i class="fas fa-image"></i> Current Work Thumbnail</span>
+                        <div class="member-list-right">
+                            <div class="member-list-thumb-meta">
+                                <div class="member-list-thumb-title">Simulator Migration</div>
+                                <span class="member-list-thumb-sub" onclick="openLightbox('images/work/work_interactive_demo.svg', 'Independent Web Simulator Migration', 'Ilian Khankhalaev', 'Migrating project architecture from external IdeaVibes hosting to our lab repository, maintaining full standalone functionality.')">
+                                    <i class="fas fa-search-plus"></i> View Work
+                                </span>
                             </div>
-                            <div class="work-thumb-wrapper" onclick="openLightbox('images/work/work_interactive_demo.svg', 'Independent Web Simulator Migration', 'Ilian Khankhalaev', 'Migrating project architecture from external IdeaVibes hosting to our lab repository, maintaining full standalone functionality.')">
+                            <div class="member-list-thumb" onclick="openLightbox('images/work/work_interactive_demo.svg', 'Independent Web Simulator Migration', 'Ilian Khankhalaev', 'Migrating project architecture from external IdeaVibes hosting to our lab repository, maintaining full standalone functionality.')">
                                 <img src="images/work/work_interactive_demo.svg" alt="Web Simulator Architecture" />
-                                <div class="work-hover-overlay"><i class="fas fa-search-plus"></i> Enlarge Preview</div>
+                                <div class="thumb-zoom-badge"><i class="fas fa-search-plus"></i> View</div>
                             </div>
-                            <h4 class="work-caption-title">Standalone Web Engine Migration</h4>
-                            <p class="work-caption-desc">Smartly querying SOTA LLMs to build functional simulator modules: adding gravity, strain energy, and collisions.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="mailto:zpa18@sfu.ca" class="card-link-icon" title="Email"><i class="fas fa-envelope"></i></a>
-                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="card-link-icon" title="GitHub"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
 
                     <!-- Elton -->
-                    <div class="member-card" data-project="proj-b4" data-name="elton">
-                        <div class="card-profile-header">
-                            <div class="member-avatar-box">
+                    <div class="member-list-item" data-project="proj-b4" data-name="elton">
+                        <div class="member-list-left">
+                            <div class="member-list-avatar">
                                 <img src="images/members/elton.jpg" alt="Elton" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
                                 <div class="avatar-fallback" style="display:none;">EL</div>
                             </div>
-                            <div class="member-details">
-                                <h3 class="member-name">Elton</h3>
-                                <div class="member-affiliation">School of Computing Science, SFU</div>
-                            </div>
-                        </div>
-                        <div class="member-meta">
-                            <div class="project-tag" onclick="filterByProject('proj-b4')"><i class="fas fa-desktop"></i> Showcase Platform &amp; UI Controllers</div>
-                        </div>
-                        <div class="work-showcase">
-                            <div class="work-header">
-                                <span class="work-header-title"><i class="fas fa-image"></i> Current Work Thumbnail</span>
-                            </div>
-                            <div class="work-thumb-wrapper" onclick="openLightbox('images/work/work_interactive_demo.svg', 'Showcase UI & Interactive Demo', 'Elton', 'Developing real-time client UI for interactive facial simulation benchmarks and CAN-WICS poster presentation.')">
-                                <img src="images/work/work_interactive_demo.svg" alt="Web UI Demonstration" />
-                                <div class="work-hover-overlay"><i class="fas fa-search-plus"></i> Enlarge Preview</div>
-                            </div>
-                            <h4 class="work-caption-title">Showcase UI &amp; Interactive Controls</h4>
-                            <p class="work-caption-desc">Optimizing client-side evaluation of muscle parameters and interactive UI for North American competition review.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="mailto:zpa18@sfu.ca" class="card-link-icon" title="Email"><i class="fas fa-envelope"></i></a>
-                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="card-link-icon" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 7. Open Placeholder Slots -->
-                <div class="section-header">
-                    <h2><i class="fas fa-user-plus" style="color: var(--accent-amber);"></i> Open Research Slots (Ready to Fill)</h2>
-                </div>
-
-                <div class="members-grid" id="placeholderGrid">
-                    <!-- Placeholder Slot 1 -->
-                    <div class="member-card member-card-placeholder" data-project="placeholder proj-b5" data-name="open research slot 1">
-                        <div class="card-profile-header">
-                            <div class="member-avatar-box">
-                                <div class="avatar-fallback" style="background: linear-gradient(135deg, #f59e0b, #d97706);"><i class="fas fa-user-plus"></i></div>
-                            </div>
-                            <div class="member-details">
-                                <h3 class="member-name">[Open Research Slot 1]</h3>
-                                <div class="member-affiliation">Available Student Position &bull; SFU</div>
-                            </div>
-                        </div>
-                        <div class="placeholder-instruction">
-                            <i class="fas fa-edit"></i> Edit name in <code>members.html</code> &amp; drop thumbnail
-                        </div>
-                        <div class="work-showcase">
-                            <div class="work-header">
-                                <span class="work-header-title"><i class="fas fa-image"></i> Research Work Placeholder</span>
-                            </div>
-                            <div class="work-thumb-wrapper">
-                                <div class="thumb-drop-hint">
-                                    <i class="fas fa-cloud-upload-alt"></i>
-                                    <span>Drop Current Work Image</span>
-                                    <code>images/work/student_work_1.jpg</code>
+                            <div class="member-list-info">
+                                <h3 class="member-list-name">Elton</h3>
+                                <div class="member-list-affil">School of Computing Science, Simon Fraser University</div>
+                                <div class="member-list-project-tag" onclick="filterByProject('proj-b4')">
+                                    <i class="fas fa-desktop"></i> Project B4: Showcase UI &amp; Interactive Controls
                                 </div>
                             </div>
-                            <h4 class="work-caption-title">Upcoming Research Milestone</h4>
-                            <p class="work-caption-desc">Placeholder for student researcher's simulation screenshot, validation plot, or experimental results.</p>
                         </div>
-                        <div class="card-footer">
-                            <span style="font-size: 0.78rem; color: var(--text-muted);"><i class="fas fa-info-circle"></i> Ready to fill</span>
+                        <div class="member-list-right">
+                            <div class="member-list-thumb-meta">
+                                <div class="member-list-thumb-title">Showcase UI &amp; Demo</div>
+                                <span class="member-list-thumb-sub" onclick="openLightbox('images/work/work_interactive_demo.svg', 'Showcase UI & Interactive Demo', 'Elton', 'Developing real-time client UI for interactive facial simulation benchmarks and CAN-WICS poster presentation.')">
+                                    <i class="fas fa-search-plus"></i> View Work
+                                </span>
+                            </div>
+                            <div class="member-list-thumb" onclick="openLightbox('images/work/work_interactive_demo.svg', 'Showcase UI & Interactive Demo', 'Elton', 'Developing real-time client UI for interactive facial simulation benchmarks and CAN-WICS poster presentation.')">
+                                <img src="images/work/work_interactive_demo.svg" alt="Web UI Demonstration" />
+                                <div class="thumb-zoom-badge"><i class="fas fa-search-plus"></i> View</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Placeholder Slot 1 -->
+                    <div class="member-list-item member-list-item-placeholder" data-project="placeholder proj-b5" data-name="open research slot 1">
+                        <div class="member-list-left">
+                            <div class="member-list-avatar">
+                                <div class="avatar-fallback" style="background: linear-gradient(135deg, #f59e0b, #d97706);"><i class="fas fa-user-plus"></i></div>
+                            </div>
+                            <div class="member-list-info">
+                                <h3 class="member-list-name">[Open Research Slot 1]</h3>
+                                <div class="member-list-affil">Available Student Position &bull; Simon Fraser University</div>
+                                <div class="member-list-project-tag" style="border: 1px dashed var(--accent-amber); color: var(--accent-amber);">
+                                    <i class="fas fa-edit"></i> Edit Name in <code>members.html</code> &amp; Drop Thumbnail
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-list-right">
+                            <div class="member-list-thumb-meta">
+                                <div class="member-list-thumb-title">Upcoming Work</div>
+                                <span class="member-list-thumb-sub">images/work/student_1.jpg</span>
+                            </div>
+                            <div class="member-list-thumb" style="display: flex; align-items: center; justify-content: center; background: var(--bg-tertiary); border: 1px dashed var(--border-dashed);">
+                                <i class="fas fa-cloud-upload-alt" style="color: var(--accent-blue); font-size: 1.4rem;"></i>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Placeholder Slot 2 -->
-                    <div class="member-card member-card-placeholder" data-project="placeholder proj-b1" data-name="open research slot 2">
-                        <div class="card-profile-header">
-                            <div class="member-avatar-box">
+                    <div class="member-list-item member-list-item-placeholder" data-project="placeholder proj-b1" data-name="open research slot 2">
+                        <div class="member-list-left">
+                            <div class="member-list-avatar">
                                 <div class="avatar-fallback" style="background: linear-gradient(135deg, #f59e0b, #d97706);"><i class="fas fa-user-plus"></i></div>
                             </div>
-                            <div class="member-details">
-                                <h3 class="member-name">[Open Research Slot 2]</h3>
-                                <div class="member-affiliation">Available Student Position &bull; SFU</div>
-                            </div>
-                        </div>
-                        <div class="placeholder-instruction">
-                            <i class="fas fa-edit"></i> Edit name in <code>members.html</code> &amp; drop thumbnail
-                        </div>
-                        <div class="work-showcase">
-                            <div class="work-header">
-                                <span class="work-header-title"><i class="fas fa-image"></i> Research Work Placeholder</span>
-                            </div>
-                            <div class="work-thumb-wrapper">
-                                <div class="thumb-drop-hint">
-                                    <i class="fas fa-cloud-upload-alt"></i>
-                                    <span>Drop Current Work Image</span>
-                                    <code>images/work/student_work_2.jpg</code>
+                            <div class="member-list-info">
+                                <h3 class="member-list-name">[Open Research Slot 2]</h3>
+                                <div class="member-list-affil">Available Student Position &bull; Simon Fraser University</div>
+                                <div class="member-list-project-tag" style="border: 1px dashed var(--accent-amber); color: var(--accent-amber);">
+                                    <i class="fas fa-edit"></i> Edit Name in <code>members.html</code> &amp; Drop Thumbnail
                                 </div>
                             </div>
-                            <h4 class="work-caption-title">Upcoming Research Milestone</h4>
-                            <p class="work-caption-desc">Placeholder for student researcher's simulation screenshot, validation plot, or experimental results.</p>
                         </div>
-                        <div class="card-footer">
-                            <span style="font-size: 0.78rem; color: var(--text-muted);"><i class="fas fa-info-circle"></i> Ready to fill</span>
+                        <div class="member-list-right">
+                            <div class="member-list-thumb-meta">
+                                <div class="member-list-thumb-title">Upcoming Work</div>
+                                <span class="member-list-thumb-sub">images/work/student_2.jpg</span>
+                            </div>
+                            <div class="member-list-thumb" style="display: flex; align-items: center; justify-content: center; background: var(--bg-tertiary); border: 1px dashed var(--border-dashed);">
+                                <i class="fas fa-cloud-upload-alt" style="color: var(--accent-blue); font-size: 1.4rem;"></i>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Placeholder Slot 3 -->
-                    <div class="member-card member-card-placeholder" data-project="placeholder proj-b2" data-name="open research slot 3">
-                        <div class="card-profile-header">
-                            <div class="member-avatar-box">
+                    <div class="member-list-item member-list-item-placeholder" data-project="placeholder proj-b2" data-name="open research slot 3">
+                        <div class="member-list-left">
+                            <div class="member-list-avatar">
                                 <div class="avatar-fallback" style="background: linear-gradient(135deg, #a855f7, #6366f1);"><i class="fas fa-user-plus"></i></div>
                             </div>
-                            <div class="member-details">
-                                <h3 class="member-name">[Open Research Slot 3]</h3>
-                                <div class="member-affiliation">Available Student Position &bull; SFU</div>
-                            </div>
-                        </div>
-                        <div class="placeholder-instruction">
-                            <i class="fas fa-edit"></i> Edit name in <code>members.html</code> &amp; drop thumbnail
-                        </div>
-                        <div class="work-showcase">
-                            <div class="work-header">
-                                <span class="work-header-title"><i class="fas fa-image"></i> Research Work Placeholder</span>
-                            </div>
-                            <div class="work-thumb-wrapper">
-                                <div class="thumb-drop-hint">
-                                    <i class="fas fa-cloud-upload-alt"></i>
-                                    <span>Drop Current Work Image</span>
-                                    <code>images/work/student_work_3.jpg</code>
+                            <div class="member-list-info">
+                                <h3 class="member-list-name">[Open Research Slot 3]</h3>
+                                <div class="member-list-affil">Available Student Position &bull; Simon Fraser University</div>
+                                <div class="member-list-project-tag" style="border: 1px dashed var(--accent-purple); color: var(--accent-purple);">
+                                    <i class="fas fa-edit"></i> Edit Name in <code>members.html</code> &amp; Drop Thumbnail
                                 </div>
                             </div>
-                            <h4 class="work-caption-title">Upcoming Research Milestone</h4>
-                            <p class="work-caption-desc">Placeholder for incoming researcher focusing on physical modeling or speech coarticulation.</p>
                         </div>
-                        <div class="card-footer">
-                            <span style="font-size: 0.78rem; color: var(--text-muted);"><i class="fas fa-info-circle"></i> Ready to fill</span>
+                        <div class="member-list-right">
+                            <div class="member-list-thumb-meta">
+                                <div class="member-list-thumb-title">Upcoming Work</div>
+                                <span class="member-list-thumb-sub">images/work/student_3.jpg</span>
+                            </div>
+                            <div class="member-list-thumb" style="display: flex; align-items: center; justify-content: center; background: var(--bg-tertiary); border: 1px dashed var(--border-dashed);">
+                                <i class="fas fa-cloud-upload-alt" style="color: var(--accent-purple); font-size: 1.4rem;"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ================================================================= -->
+                <!-- LAB ALUMNI                                                        -->
+                <!-- ================================================================= -->
+                <div class="section-header" style="margin-top: 36px;">
+                    <h2><i class="fas fa-graduation-cap" style="color: var(--accent-purple);"></i> Lab Alumni</h2>
+                    <span class="section-count">Alumni</span>
+                </div>
+
+                <div class="members-list-container" id="alumniList">
+                    <!-- Stella -->
+                    <div class="member-list-item" data-project="alumni" data-name="stella">
+                        <div class="member-list-left">
+                            <div class="member-list-avatar">
+                                <img src="images/members/stella.jpg" alt="Stella" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                                <div class="avatar-fallback" style="background: linear-gradient(135deg, #8b5cf6, #ec4899); display:none;">S</div>
+                            </div>
+                            <div class="member-list-info">
+                                <h3 class="member-list-name">Stella</h3>
+                                <div class="member-list-affil"><span class="member-role-badge" style="background: rgba(139, 92, 246, 0.12); color: var(--accent-purple); border-color: rgba(139, 92, 246, 0.25);">Lab Alumni</span> School of Computing Science, Simon Fraser University</div>
+                                <div class="member-list-project-tag" style="cursor: default;">
+                                    <i class="fas fa-award"></i> Former Lab Researcher &amp; Contributor
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-list-right">
+                            <div class="member-list-thumb-meta">
+                                <div class="member-list-thumb-title">Alumni Contributor</div>
+                                <span class="member-list-thumb-sub" style="cursor: default; color: var(--text-muted);">GrUVi Laboratory</span>
+                            </div>
+                            <div class="member-list-thumb" style="display: flex; align-items: center; justify-content: center; background: var(--bg-tertiary); border: 1px solid var(--border-color);">
+                                <i class="fas fa-user-graduate" style="color: var(--accent-purple); font-size: 1.4rem;"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -932,6 +856,8 @@
                                 <span class="team-chip">Viktor Zepeda Sanchez</span>
                                 <span class="team-chip">Oleh Kutryk</span>
                                 <span class="team-chip">Nikolay Deinego</span>
+                                <span class="team-chip">Kissinger Chen</span>
+                                <span class="team-chip">Ryan M</span>
                                 <span class="team-chip">Richard Peng (Mentor)</span>
                             </div>
                         </div>
@@ -960,10 +886,10 @@
                             <div class="project-team-list">
                                 <strong>Team:</strong>
                                 <span class="team-chip">Karl Onasa</span>
-                                <span class="team-chip">Ryan Marwaha</span>
+                                <span class="team-chip">Ryan M</span>
                                 <span class="team-chip">Daiwik Marrott</span>
                                 <span class="team-chip">Afraz Syed</span>
-                                <span class="team-chip">Connor Churcott</span>
+                                <span class="team-chip">Nikolay Deinego</span>
                                 <span class="team-chip">Neev Madaan</span>
                                 <span class="team-chip">Richard Peng (Mentor)</span>
                             </div>
@@ -992,8 +918,9 @@
 
                             <div class="project-team-list">
                                 <strong>Team:</strong>
-                                <span class="team-chip">Sophia Don Tranho</span>
-                                <span class="team-chip">William Huang</span>
+                                <span class="team-chip">Sophia Don Tranho (Undergraduate RA)</span>
+                                <span class="team-chip">William Huang (Undergraduate RA)</span>
+                                <span class="team-chip">Kissinger Chen</span>
                                 <span class="team-chip">Richard Peng (Mentor)</span>
                             </div>
                         </div>
@@ -1063,8 +990,11 @@
 
                             <div class="project-team-list">
                                 <strong>Team:</strong>
+                                <span class="team-chip">Feifei Yu (Faye)</span>
+                                <span class="team-chip">Ilian Khankhalaev</span>
+                                <span class="team-chip">Elton</span>
+                                <span class="team-chip">Nikolay Deinego</span>
                                 <span class="team-chip">Qiu Shi</span>
-                                <span class="team-chip">Sevy Veeken</span>
                                 <span class="team-chip">Richard Peng (Mentor)</span>
                             </div>
                         </div>
@@ -1089,9 +1019,9 @@
 
                             <div class="project-team-list">
                                 <strong>Team:</strong>
-                                <span class="team-chip">Richard Peng</span>
-                                <span class="team-chip">Ryan Marwaha</span>
-                                <span class="team-chip">Viktor Zepeda Sanchez</span>
+                                <span class="team-chip">Yaoting Wang</span>
+                                <span class="team-chip">Kissinger Chen</span>
+                                <span class="team-chip">Richard Peng (Mentor)</span>
                             </div>
                         </div>
 
@@ -1178,21 +1108,22 @@
             });
         }
 
-        // Live Search and Filtering
+        // Live Search and Filtering on Member List Items
         var searchInput = document.getElementById('memberSearch');
         var projectButtons = document.querySelectorAll('#projectPills .filter-btn');
         var projectSelect = document.getElementById('projectFilter');
-        var memberCards = document.querySelectorAll('.member-card');
+        var memberListItems = document.querySelectorAll('.member-list-item');
 
         var currentProjectFilter = 'all';
         var searchQuery = '';
 
         function applyFilters() {
             var visibleCount = 0;
-            memberCards.forEach(function(card) {
-                var cardProjects = card.getAttribute('data-project') || '';
-                var cardName = card.getAttribute('data-name') || '';
-                var cardText = card.textContent.toLowerCase();
+            var activeMemberCount = 0;
+            memberListItems.forEach(function(item) {
+                var cardProjects = item.getAttribute('data-project') || '';
+                var cardName = item.getAttribute('data-name') || '';
+                var cardText = item.textContent.toLowerCase();
 
                 var projectMatch = true;
                 if (currentProjectFilter !== 'all') {
@@ -1206,16 +1137,19 @@
                 var searchMatch = !searchQuery || (cardName.indexOf(searchQuery) !== -1) || (cardText.indexOf(searchQuery) !== -1);
 
                 if (projectMatch && searchMatch) {
-                    card.style.display = 'flex';
+                    item.style.display = 'flex';
                     visibleCount++;
+                    if (cardProjects.indexOf('placeholder') === -1 && cardProjects.indexOf('alumni') === -1) {
+                        activeMemberCount++;
+                    }
                 } else {
-                    card.style.display = 'none';
+                    item.style.display = 'none';
                 }
             });
 
             var totalCountEl = document.getElementById('totalMemberCount');
             if (totalCountEl && currentProjectFilter === 'all' && !searchQuery) {
-                totalCountEl.textContent = visibleCount;
+                totalCountEl.textContent = activeMemberCount;
             }
         }
 
