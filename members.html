@@ -112,15 +112,15 @@
                             <div class="stat-label">PhD Lead &amp; Mentor</div>
                         </div>
                         <div class="stat-card">
-                            <div class="stat-number">3</div>
-                            <div class="stat-label">Master's Researchers</div>
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Grad &amp; Faculty Collaborators</div>
                         </div>
                         <div class="stat-card">
-                            <div class="stat-number">11+</div>
+                            <div class="stat-number">12+</div>
                             <div class="stat-label">Undergrad Researchers</div>
                         </div>
                         <div class="stat-card">
-                            <div class="stat-number">6</div>
+                            <div class="stat-number">7</div>
                             <div class="stat-label">On-Going Projects</div>
                         </div>
                     </div>
@@ -137,12 +137,13 @@
 
                         <!-- Project Category Filter Buttons -->
                         <div class="filter-pills-group" id="projectPills">
-                            <button class="filter-btn active" data-filter="all">All Members (<span id="totalMemberCount">17</span>)</button>
+                            <button class="filter-btn active" data-filter="all">All Members (<span id="totalMemberCount">20</span>)</button>
                             <button class="filter-btn" data-filter="proj-b1">Proj B1 (Ground Truth)</button>
                             <button class="filter-btn" data-filter="proj-b2">Proj B2 (Fine Dynamics)</button>
                             <button class="filter-btn" data-filter="proj-b3">Proj B3 (Asset Gen)</button>
                             <button class="filter-btn" data-filter="proj-b4-b5">Proj B4 &amp; B5 (Solver/Web)</button>
                             <button class="filter-btn" data-filter="proj-a1">Proj A1 (Skin Registration)</button>
+                            <button class="filter-btn" data-filter="proj-c7">Proj C7 (Piano Interface)</button>
                             <button class="filter-btn" data-filter="placeholder">Open Slots (2)</button>
                             <button class="filter-btn" data-filter="alumni"><i class="fas fa-graduation-cap"></i> Alumni (1)</button>
                         </div>
@@ -157,6 +158,7 @@
                                 <option value="proj-b4">Project B4: Develop Physical Simulator (IdeaVibes)</option>
                                 <option value="proj-a1">Project A1: Skin-to-Muscle Registration</option>
                                 <option value="proj-b5">Project B5: In-House Physical Simulator (FEM/XPBD)</option>
+                                <option value="proj-c7">Project C7: Learning-Based Acceleration for Piano-Style Interface</option>
                             </select>
                         </div>
                     </div>
@@ -210,6 +212,93 @@
 
                 <div class="members-list-container" id="membersList">
                     
+                    <!-- Mirza Zaeem Baig -->
+                    <div class="member-list-item" data-project="proj-b1" data-name="mirza zaeem baig">
+                        <div class="member-list-left">
+                            <div class="member-list-avatar">
+                                <img src="images/members/mirza_zaeem_baig.jpg" alt="Mirza Zaeem Baig" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                                <div class="avatar-fallback" style="background: linear-gradient(135deg, #0284c7, #2563eb); color: #fff;">MB</div>
+                            </div>
+                            <div class="member-list-info">
+                                <h3 class="member-list-name">Mirza Zaeem Baig</h3>
+                                <div class="member-list-affil"><span class="member-role-badge" style="background: rgba(2, 132, 199, 0.1); color: var(--accent-blue); border-color: rgba(2, 132, 199, 0.25);">Sessional Instructor</span> School of Computing Science, Simon Fraser University</div>
+                                <div class="member-list-project-tag" onclick="filterByProject('proj-b1')">
+                                    <i class="fas fa-x-ray"></i> Project B1: Validating Facial Animation via Biological Ground Truth
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-list-right">
+                            <div class="member-list-thumb-meta">
+                                <div class="member-list-thumb-title">Biological Ground Truth</div>
+                                <span class="member-list-thumb-sub" onclick="openLightbox('images/work/work_ground_truth_mri.png', 'Biological Ground Truth: sEMG &amp; Dynamic MRI Alignment', 'Mirza Zaeem Baig', 'Collaborating on Project B1: validating physically based facial simulation against biological ground truth datasets, including dynamic magnetic resonance imaging (MRI) and surface electromyography (sEMG).')">
+                                    <i class="fas fa-search-plus"></i> View Work
+                                </span>
+                            </div>
+                            <div class="member-list-thumb" onclick="openLightbox('images/work/work_ground_truth_mri.png', 'Biological Ground Truth: sEMG &amp; Dynamic MRI Alignment', 'Mirza Zaeem Baig', 'Collaborating on Project B1: validating physically based facial simulation against biological ground truth datasets, including dynamic magnetic resonance imaging (MRI) and surface electromyography (sEMG).')">
+                                <img src="images/work/work_ground_truth_mri.png" alt="Biological Ground Truth (sEMG &amp; Dynamic MRI Alignment)" />
+                                <div class="thumb-zoom-badge"><i class="fas fa-search-plus"></i> View</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Siyan Luo -->
+                    <div class="member-list-item" data-project="proj-c7" data-name="siyan luo">
+                        <div class="member-list-left">
+                            <div class="member-list-avatar">
+                                <img src="images/members/siyan_luo.jpg" alt="Siyan Luo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                                <div class="avatar-fallback" style="background: linear-gradient(135deg, #059669, #0d9488); color: #fff;">SL</div>
+                            </div>
+                            <div class="member-list-info">
+                                <h3 class="member-list-name">Siyan Luo</h3>
+                                <div class="member-list-affil"><span class="member-role-badge" style="background: rgba(5, 150, 105, 0.1); color: var(--accent-emerald); border-color: rgba(5, 150, 105, 0.25);">PhD Student</span> School of Computing Sciences and Computer Engineering, The University of Southern Mississippi</div>
+                                <div class="member-list-project-tag" onclick="filterByProject('proj-c7')">
+                                    <i class="fas fa-music"></i> Project C7: Learning-Based Acceleration for Piano-Style Interface
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-list-right">
+                            <div class="member-list-thumb-meta">
+                                <div class="member-list-thumb-title">Neural Acceleration Core</div>
+                                <span class="member-list-thumb-sub" onclick="openLightbox('images/work/work_piano_acceleration.svg', 'Learning-Based Acceleration for Piano-Style Interface', 'Siyan Luo', 'Project C7 Lead: Developing deep neural surrogate models to accelerate continuum soft-tissue solvers for zero-latency, 60 FPS real-time interactive piano-style keyboard facial animation control.')">
+                                    <i class="fas fa-search-plus"></i> View Neural Model
+                                </span>
+                            </div>
+                            <div class="member-list-thumb" onclick="openLightbox('images/work/work_piano_acceleration.svg', 'Learning-Based Acceleration for Piano-Style Interface', 'Siyan Luo', 'Project C7 Lead: Developing deep neural surrogate models to accelerate continuum soft-tissue solvers for zero-latency, 60 FPS real-time interactive piano-style keyboard facial animation control.')">
+                                <img src="images/work/work_piano_acceleration.svg" alt="Project C7: Learning-Based Acceleration for Piano-Style Interface" />
+                                <div class="thumb-zoom-badge"><i class="fas fa-search-plus"></i> View</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Jacqueline Yang -->
+                    <div class="member-list-item" data-project="proj-b1" data-name="jacqueline yang">
+                        <div class="member-list-left">
+                            <div class="member-list-avatar">
+                                <img src="images/members/jacqueline_yang.jpg" alt="Jacqueline Yang" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                                <div class="avatar-fallback" style="background: linear-gradient(135deg, #0ea5e9, #0284c7); color: #fff;">JY</div>
+                            </div>
+                            <div class="member-list-info">
+                                <h3 class="member-list-name">Jacqueline Yang</h3>
+                                <div class="member-list-affil"><span class="member-role-badge">Undergraduate Researcher</span> Department of Computer Science, University of British Columbia</div>
+                                <div class="member-list-project-tag" onclick="filterByProject('proj-b1')">
+                                    <i class="fas fa-x-ray"></i> Project B1: Validating Facial Animation via Biological Ground Truth
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-list-right">
+                            <div class="member-list-thumb-meta">
+                                <div class="member-list-thumb-title">Biological Ground Truth</div>
+                                <span class="member-list-thumb-sub" onclick="openLightbox('images/work/work_ground_truth_mri.png', 'Biological Ground Truth: sEMG &amp; Dynamic MRI Alignment', 'Jacqueline Yang', 'Undergraduate researcher collaborating from UBC on Project B1: quantitatively evaluating physically based facial simulation against biological ground truth datasets (dynamic MRI scans and sEMG muscle firing arrays).')">
+                                    <i class="fas fa-search-plus"></i> View Work
+                                </span>
+                            </div>
+                            <div class="member-list-thumb" onclick="openLightbox('images/work/work_ground_truth_mri.png', 'Biological Ground Truth: sEMG &amp; Dynamic MRI Alignment', 'Jacqueline Yang', 'Undergraduate researcher collaborating from UBC on Project B1: quantitatively evaluating physically based facial simulation against biological ground truth datasets (dynamic MRI scans and sEMG muscle firing arrays).')">
+                                <img src="images/work/work_ground_truth_mri.png" alt="Biological Ground Truth (sEMG &amp; Dynamic MRI Alignment)" />
+                                <div class="thumb-zoom-badge"><i class="fas fa-search-plus"></i> View</div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Sophia Don Tranho -->
                     <div class="member-list-item" data-project="proj-b3 proj-b1" data-name="sophia don tranho">
                         <div class="member-list-left">
@@ -833,7 +922,7 @@
                 <section class="projects-section" id="labProjects">
                     <div class="section-header">
                         <h2><i class="fas fa-project-diagram" style="color: var(--accent-primary);"></i> On-Going Research Projects Deep Dive</h2>
-                        <span class="section-count">6 Projects</span>
+                        <span class="section-count">7 Projects</span>
                     </div>
 
                     <div class="projects-grid">
@@ -881,6 +970,8 @@
 
                             <div class="project-team-list">
                                 <strong>Team:</strong>
+                                <span class="team-chip">Mirza Zaeem Baig (Sessional Instructor)</span>
+                                <span class="team-chip">Jacqueline Yang (UBC Undergraduate Researcher)</span>
                                 <span class="team-chip">Sophia Don Tranho (Benchmark Evaluation)</span>
                                 <span class="team-chip">Stella (Lab Alumni, Benchmark Evaluation)</span>
                                 <span class="team-chip">Gurkaran Singh</span>
@@ -1142,6 +1233,41 @@
                                 <strong>Team:</strong>
                                 <span class="team-chip">Yaoting Wang</span>
                                 <span class="team-chip">Kissinger Chen</span>
+                                <span class="team-chip">Richard Peng (Mentor)</span>
+                            </div>
+                        </div>
+
+                        <!-- Project C7 -->
+                        <div class="project-card" id="card-proj-c7">
+                            <div class="project-card-top">
+                                <span class="project-badge-code" style="background: rgba(5, 150, 105, 0.12); color: var(--accent-emerald); border-color: rgba(5, 150, 105, 0.25);">Project C7</span>
+                                <span class="project-status status-active">Neural Acceleration</span>
+                            </div>
+                            <h3 class="project-card-title">Learning-Based Acceleration for Piano-Style Interface</h3>
+                            <div class="project-card-desc">
+                                <p>
+                                    Our biomechanically grounded facial framework features a piano-style interactive performance interface where polyphonic key inputs dynamically trigger facial action controllers, phoneme activations, and expressive co-articulations. While physically based continuum solvers yield anatomical realism, evaluating complex non-linear finite elements or position-based dynamics in real time can induce frame latency. Project C7 resolves this computational bottleneck by developing deep learning surrogate models and physics-informed neural network (PINN) architectures that approximate solver dynamics. By learning high-dimensional non-linear soft-tissue deformation mappings from physical simulation trajectories, this pipeline achieves zero-latency, 60 FPS performance on consumer hardware while preserving critical physical volume conservation.
+                                </p>
+                            </div>
+
+                            <!-- Project C7 Showcase Figure -->
+                            <div class="project-card-figures">
+                                <div class="project-card-fig" onclick="openLightbox('images/work/work_piano_acceleration.svg', 'Learning-Based Acceleration for Piano-Style Interface', 'Project C7 (Siyan Luo)', 'Deep learning surrogate models accelerating continuum mechanics solvers to achieve real-time, low-latency responsiveness for piano-style musical and keyboard facial animation control.')">
+                                    <img src="images/work/work_piano_acceleration.svg" alt="Project C7: Learning-Based Acceleration for Piano-Style Interface" />
+                                    <div class="project-card-fig-caption">
+                                        <i class="fas fa-search-plus"></i> <strong>Fig 1:</strong> Neural Acceleration &amp; Piano Interface
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-teaches-box">
+                                <strong><i class="fas fa-graduation-cap"></i> Why it teaches research:</strong>
+                                This project operates at the confluence of scientific machine learning (SciML), deep neural surrogates, and interactive computer animation. Researchers gain mastery in formulating physics-informed loss constraints, training compact neural operators on high-dimensional soft-tissue displacement fields, and deploying lightweight inference runtimes for interactive graphics.
+                            </div>
+
+                            <div class="project-team-list">
+                                <strong>Team:</strong>
+                                <span class="team-chip">Siyan Luo (PhD Student, USM &bull; Lead Researcher)</span>
                                 <span class="team-chip">Richard Peng (Mentor)</span>
                             </div>
                         </div>
